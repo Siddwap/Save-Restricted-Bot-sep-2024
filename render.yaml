@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: Save Restricted 
+    plan: free
+    env: docker
+    dockerfilePath: Dockerfile
+    repo: https://github.com/Siddwap/Save-Restricted-Bot-sep-2024 
+    branch: master
+    autoDeploy: false
+    envVars:
+      - key: LOL_BOT_TOKEN
+        sync: false
+      - key: API_LOL_ID
+        sync: false
+      - key: API_LOL_HASH
+        sync: false
+      - key: STRING
+        sync: false
+      - key: PORT
+        value: 3000  # Default port value, update if needed
